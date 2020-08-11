@@ -88,4 +88,46 @@ Ici, on pré-suppose avoir défini ce qu'est un réseau. En fait ceci aurait dû
 
 Je pense que grosso modo les mêmes réflexions qu'en cas d'ordinateur éteint s'appliquent alors, mais je peux me tromper. Dans les deux cas, l'ordinateur A tente de rejoindre l'ordinateur B mais en est incapable. Je reviendrai sur cette section si nécessaire, plus tard. Passons.
 
+##### Interlude: confirmation de réception
+
+À partir de ce moment, je pense que nous avons établit une notion importante: la nécessité pour l'ordinateur B d'envoyer une confirmation de réception. Pour le moment, pensons à un message qui dit simplement "merci pour la photo!".
+
+##### L'ordinateur n'est pas disponible
+
+Supposons qu'ordinateur A envoie sa photo et que l'ordinateur B la reçoive alors qu'il fait autre chose. Ainsi, comme dans une conversation, l'ordinateur B est trop occupé pour m'envoyer le message de confirmation de réception (en fait il serait même possible que l'ordinateur B ne réalise pas que je suis en train de lui parler tellement il est occupé...) - donc ma seule solution est de ré-essayer de l'envoyer... encore et encore ?
+
+Non. Il doit y avoir une meilleure méthode !
+
+Je pourrais commencer par m'assurer que l'ordinateur B est disponible !
+
+Donc, avant d'envoyer l'image, je demande à ordinateur B s'il est disponible. (mais alors il arrive quoi s'il s'éteint/se déconnecte/devient occupé *pendant* la communication?)
+
+Ah, mais les ordinateurs ont plusieurs oreilles, j'oubliais: on les appelle *port* à ce que je sache. Donc on peut réserver un port pour ma communication.
+
+Ainsi, si l'ordinateur B m'attribue ce port, je peux le réserver pour ma communication. Et alors, l'ordinateur B pourra envoyer un message aux autres ordinateurs comme quoi il est occupé. Mais ça ne règle que partiellement le problème de la panne de courant.
+
+On pourrait décider que s'il y a une panne de courant, bien voilà: c'est tout. Il faut recommencer depuis le début. Ce n'est pas très pratique.
+
+Peut-être est-ce la seule solution ?
+
+En fait, je peux penser à plusieurs problèmes si on tente à tout prix de sauvegarder les informations envoyées d'ordi à ordi, sans serveur... alors qu'un des ordis est éteint. Par exemple, aucune façon de savoir si l'ordinateur a été rallumé mais ne s'est pas connecté au réseau, puis a utilisé le port réservé pour faire des choses diverses et variées de façon à ce que ce port ne puisse plus recevoir d'images. 
+
+Donc je pense qu'il faut le serveur.
+
+Mais si on utilisais le serveur de la façon suivante:
+
+* ordinateur A envoie son image au serveur
+* ordinateur A envoie un message à ordinateur B pour lui dire qu'un message l'attend sur le serveur.
+* ordinateur B reçoit le message lui disant qu'il a un message
+* ordinateur B récupère l'image sur le serveur.
+
+Mais nous avons encore le serveur, incontournable de l'Internet.
+
+Est-il impossible d'assurer la communication entre deux ordinateurs sur le même réseau sans serveur ? 
+
+(on sait déjà que les serveurs n'ont pas 100% de uptime de toute façon...)
+
+Par impossible, je veux dire une impossibilité mathématique
+
+
 
