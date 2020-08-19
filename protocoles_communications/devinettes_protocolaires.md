@@ -127,7 +127,15 @@ Est-il impossible d'assurer la communication entre deux ordinateurs sur le même
 
 (on sait déjà que les serveurs n'ont pas 100% de uptime de toute façon...)
 
-Par impossible, je veux dire une impossibilité mathématique
+Par impossible, je veux dire une impossibilité mathématique.
+
+Je pense qu'il est vrai que ce soit impossible, pour la simple raison que même avec un serveur, il existe au moins un cas où le message ne sera jamais retransmis: si l'ordinateur B reste éteint à jamais.
+
+Donc il ne reste que la solution de base: faire des copies sur différents serveurs, au cas où le serveur est éteint. Quelles sont les limites statistiques alors ? Je vous le demande et ce sera pour une autre fois.
+
+À partir de maintenant, nous allons parler des deux ordinateurs et du serveur, avec la notion de confirmation de réception.
+
+
 
 
 

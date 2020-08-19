@@ -1,0 +1,3 @@
+Si vous aimez la parauniversité, vous aimerez peut-être...
+
+* [Imaginary Book Club](https://columbus2020nasfic.org/schedule.html#listing-imaginary-book-club-friday-7-00-pm)
